@@ -1,9 +1,13 @@
-
-<div>
-  <img [src]="colleague.photo" alt="" style="height: 40px; width: 40px;">
-  <br>
-  {{colleague.pseudo}}
-  <br>
-  {{colleague.score}}
+<div class="card">
+  <div class="card-body">
+    <img class="card-img-top" [src]="colleague.photo" alt="" style="height: 40px; width: 40px;">
+    <p class="card-text">
+      {{colleague.pseudo | uppercase}}
+      <br>
+      {{colleague.score}}
+    </p>
+  </div>
+  <div class="card-footer">
+    <tc-like-hate (likeHateButtonCLicked)="callLikehate($event)" [score]="colleague.score"></tc-like-hate>
+  </div>
 </div>
-<tc-like-hate (likeHateButtonCLicked)="callLikehate($event)" [score]="colleague.score"></tc-like-hate>
