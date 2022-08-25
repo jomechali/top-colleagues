@@ -1,7 +1,31 @@
-<p>add-client works!</p>
+<div class="container">
 
-<input type="text" [(ngModel)]="nomClient">
-<input type="text" [(ngModel)]="prenomClient">
-<input type="text" [(ngModel)]="adresseClient">
+  <label class="badge bg-info">Nom :</label>
+  <input class="form-control" type="text" [(ngModel)]="personne.nom">
+  <label class="badge bg-info">Prenom :</label>
+  <input class="form-control" type="text" [(ngModel)]="personne.prenom">
 
-<button (click)="registerClient()">ajouter</button>
+  <label class="badge bg-info">Adresse :</label>
+  <input class="form-control" type="text" [(ngModel)]="personne.adresse">
+
+  <button (click)="registerClient()">ajouter</button>
+
+  <hr>
+  <table class="table table-success table-stripped">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Adresse</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of clients">
+        <td>{{item.nom}}</td>
+        <td>{{item.prenom}}</td>
+        <td>{{item.adresse}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

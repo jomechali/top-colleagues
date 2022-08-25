@@ -1,0 +1,9 @@
+
+<div>
+  <img [src]="colleague.photo" alt="" style="height: 40px; width: 40px;">
+  <br>
+  {{colleague.pseudo}}
+  <br>
+  {{colleague.score}}
+</div>
+<tc-like-hate (likeHateButtonCLicked)="callLikehate($event)" [score]="colleague.score"></tc-like-hate>

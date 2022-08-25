@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Personne } from '../model/personne';
 
 @Component({
   selector: 'tc-add-client',
@@ -7,33 +8,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddClientComponent implements OnInit {
 
+  personne !: Personne;
+  /*
   nomClient!: string;
   prenomClient!: string;
   adresseClient!: string;
-
-  private _clients: Array<any> = new Array<any>();
+  */
+  clients: Array<Personne> = new Array<Personne>();
 
   constructor() { }
 
   ngOnInit(): void {
-    this.nomClient = "";
-    this.prenomClient = "";
-    this.adresseClient = "";
+    this.personne = new Personne("vide", "vide", "vide");
+    /*
+    this.nomClient = "vide";
+    this.prenomClient = "vide";
+    this.adresseClient = "vide";
+    */
   }
 
   registerClient() {
-    let client: any = {
+    /*let client: any = {
       "nom": this.nomClient,
       "prenom": this.prenomClient,
       "adresse": this.adresseClient
     }
-    this._clients.push(client);
+    this.clients.push(client);
 
-    console.log(this._clients);
-    /*
-    this._clients.push(this.nomClient);
-    this._clients.push(this.prenomClient);
-    this._clients.push(this.adresseClient);
-    */
+    console.log(this.clients);*/
+
+    this.clients.push({...this.personne});
   }
 }

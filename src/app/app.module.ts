@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { ColleagueComponent } from './colleague/colleague.component';
 import { AddClientComponent } from './add-client/add-client.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AddClientComponent } from './add-client/add-client.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

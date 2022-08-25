@@ -11,4 +11,5 @@ export class AppComponent {
   callChgPrenom(prenom:string){
     alert("le nom a changé");
   }
+
 }
