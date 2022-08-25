@@ -1,1 +1,16 @@
-<p>colleague works!</p>
+<h1>Ici un template</h1>
+<!-- [] binding de propriete-->
+<img [src]="uneImage" style="height: 40px; width: 40px;" alt="une image par data binding">
+
+<!--*=> directives de structure d angular-->
+<p *ngIf="unChamps">
+  <!--{{}} => interpolation, l affichage d une variable ou le retour d une methode-->
+  {{ unChamps }} <br>
+  <!--pipe => ca permet de transformer l affichage de la donnee-->
+  {{ unChamps | uppercase }}
+</p>
+
+<input type="text" #saisie>
+<button (click)="mClique(saisie.value)">evt</button>
+
+<input type="text" [(ngModel)]="saisieTwoWay"> <br> {{saisieTwoWay}}
