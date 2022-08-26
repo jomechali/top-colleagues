@@ -4,10 +4,10 @@
     <p class="card-text">
       {{colleague.pseudo | uppercase}}
       <br>
-      {{colleague.score}}
+      {{colleague.score | score}}
     </p>
   </div>
   <div class="card-footer">
-    <tc-like-hate (likeHateButtonCLicked)="callLikehate($event)" [score]="colleague.score"></tc-like-hate>
+    <tc-like-hate (likeHateButtonCLicked)="callLikehate($event)" [likeDisable]="(colleague.score >= 1000)" [hateDisable]="(colleague.score <= -1000)"></tc-like-hate>
   </div>
 </div>

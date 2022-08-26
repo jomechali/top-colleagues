@@ -1,6 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IColleague } from 'src/app/models/icolleague';
 import { LikeHate } from 'src/app/models/like-hate';
+import { Vote } from 'src/app/models/vote';
 
 @Component({
   selector: 'tc-impl-colleague',
@@ -15,6 +16,7 @@ export class ImplColleagueComponent implements OnInit {
     photo: 'assets/logo.png'
   };
 
+  @Output() emetVote:EventEmitter<Vote> = new EventEmitter<Vote>();
   constructor() { }
 
   ngOnInit(): void {
@@ -25,6 +27,7 @@ export class ImplColleagueComponent implements OnInit {
     } else {
       this.colleague.score -= 500;
     }
+    this.emetVote.emit({colleague:{...this.colleague}, vote:taste});
   }
 
 }

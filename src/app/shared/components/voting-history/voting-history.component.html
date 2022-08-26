@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <div class="card">
+    <div class="card-header">
+      <h5 class="card-title">Historique</h5>
+    </div>
+    <div class="card-body d-flex flex-column gap-3">
+
+      <div class="card-text row" *ngFor="let currentVote of voteList, let index = index">
+
+        <div class="col-sm-4 d-flex align-self-center justify-content-sm-center">
+          <img src="assets/logo.png" alt="" style="height: 40px; width: 40px;">
+        </div>
+        <div class="col-sm-8">
+          <h5>{{currentVote.colleague.pseudo}}</h5>
+          <p>{{currentVote | likeDislikeSentence}}</p>
+          <button type="button" (click)="removeVote(index)">Supprimer</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

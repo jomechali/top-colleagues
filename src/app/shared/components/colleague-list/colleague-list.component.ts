@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { IColleague } from 'src/app/models/icolleague';
+import { Vote } from 'src/app/models/vote';
 
 @Component({
   selector: 'tc-colleague-list',
@@ -8,9 +9,10 @@ import { IColleague } from 'src/app/models/icolleague';
 })
 export class ColleagueListComponent implements OnInit {
 
-  colleagues:Array<IColleague> = new Array<IColleague>();
+  @Input() colleagues: Array<IColleague> = new Array<IColleague>();
+  @Input() listVotes: Array<Vote> = new Array<Vote>();
 
-  constructor() {
+  constructor() {/*
     this.colleagues.push({
       pseudo: 'colleague1',
       score: 1,
@@ -30,12 +32,14 @@ export class ColleagueListComponent implements OnInit {
       pseudo: 'colleague4',
       score: 4,
       photo: 'assets/logo.png'
-    })
-   }
+    })*/
+  }
 
   ngOnInit(): void {
   }
 
-  
+  callVote(vote: Vote) {
+    this.listVotes.push(vote);
+  }
 
 }

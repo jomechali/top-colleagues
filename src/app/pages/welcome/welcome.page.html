@@ -1,0 +1,12 @@
+<div class="container-fluid d-flex">
+  <div class="container-fluid row">
+    <div class="col-md-6">
+      <button type="button" class="btn btn-light">Rafraîchir la liste</button>
+      <tc-colleague-list [colleagues]="listColleagues" [listVotes]="listVotes"></tc-colleague-list>
+    </div>
+    <div class="col-md-6">
+      <tc-voting-history [voteList]="listVotes"></tc-voting-history>
+
+    </div>
+  </div>
+</div>

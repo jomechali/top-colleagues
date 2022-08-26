@@ -9,7 +9,9 @@ import { LikeHate } from 'src/app/models/like-hate';
 export class LikeHateComponent implements OnInit {
 
   @Output() likeHateButtonCLicked: EventEmitter<LikeHate> = new EventEmitter<LikeHate>();
-  @Input() score: number = 0;
+  @Input() hateDisable:boolean = false;
+  @Input() likeDisable:boolean = false;
+
   likehate: LikeHate = LikeHate.HATE;
   constructor() { }
 

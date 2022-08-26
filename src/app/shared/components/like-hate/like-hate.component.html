@@ -1,4 +1,4 @@
 <div>
-  <button (click)="likeBtnClicked()" [disabled]="score >= 1000">J'aime</button>
-  <button (click)="dislikeBtnClicked()" [disabled]="score <= -1000">Je déteste</button>
+  <button class="btn btn-primary" (click)="likeBtnClicked()" [disabled]="likeDisable">J'aime</button>
+  <button class="btn btn-danger" (click)="dislikeBtnClicked()" [disabled]="hateDisable">Je déteste</button>
 </div>
