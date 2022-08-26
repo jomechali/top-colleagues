@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { IColleague } from 'src/app/models/icolleague';
 import { Vote } from 'src/app/models/vote';
+import { ColleagueService } from 'src/app/providers/colleague.service';
+import { VoteService } from 'src/app/providers/vote.service';
 
 @Component({
   selector: 'tc-colleague-list',
@@ -8,38 +10,24 @@ import { Vote } from 'src/app/models/vote';
   styleUrls: ['./colleague-list.component.scss']
 })
 export class ColleagueListComponent implements OnInit {
-
-  @Input() colleagues: Array<IColleague> = new Array<IColleague>();
-  @Input() listVotes: Array<Vote> = new Array<Vote>();
-
-  constructor() {/*
-    this.colleagues.push({
-      pseudo: 'colleague1',
-      score: 1,
-      photo: 'assets/logo.png'
-    })
-    this.colleagues.push({
-      pseudo: 'colleague2',
-      score: 2,
-      photo: 'assets/logo.png'
-    })
-    this.colleagues.push({
-      pseudo: 'colleague3',
-      score: 3,
-      photo: 'assets/logo.png'
-    })
-    this.colleagues.push({
-      pseudo: 'colleague4',
-      score: 4,
-      photo: 'assets/logo.png'
-    })*/
+  /*
+    @Input() colleagues: Array<IColleague> = new Array<IColleague>();
+    @Input() listVotes: Array<Vote> = new Array<Vote>();
+  */
+ /**
+  *
+  * @param colleagueService injection du singleton du service colleagueService
+  * public pour l utiliser dans le template html
+  */
+  constructor(public colleagueService:ColleagueService) {
   }
 
   ngOnInit(): void {
   }
 
   callVote(vote: Vote) {
-    this.listVotes.push(vote);
+    this.colleagueService.addVote(vote);
+
   }
 
 }

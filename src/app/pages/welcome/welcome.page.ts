@@ -20,19 +20,19 @@ export class WelcomePage implements OnInit {
    *
    */
 
-  listColleagues : Array<IColleague> = new Array<IColleague>();
-  listVotes : Array<Vote> = new Array<Vote>();
+  /*listColleagues: Array<IColleague> = new Array<IColleague>();
+  listVotes: Array<Vote> = new Array<Vote>();*/
 
   constructor() { }
 
-   ngOnInit(): void {
+  ngOnInit(): void {
+    /*
+        this.listColleagues.push({photo:'assets/logo.png',pseudo:'cge',score:580});
 
-    this.listColleagues.push({photo:'assets/logo.png',pseudo:'cge',score:580});
+        this.listColleagues.push({photo:'assets/logo.png',pseudo:'speedy',score:80});
 
-    this.listColleagues.push({photo:'assets/logo.png',pseudo:'speedy',score:80});
-
-    this.listColleagues.push({photo:'assets/logo.png',pseudo:'robert',score:50});
-
+        this.listColleagues.push({photo:'assets/logo.png',pseudo:'robert',score:50});
+    */
   }
 
 }

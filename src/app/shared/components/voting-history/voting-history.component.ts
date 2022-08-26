@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { LikeHate } from 'src/app/models/like-hate';
 import { Vote } from 'src/app/models/vote';
+import { VoteService } from 'src/app/providers/vote.service';
 
 @Component({
   selector: 'tc-voting-history',
@@ -9,8 +10,8 @@ import { Vote } from 'src/app/models/vote';
 })
 export class VotingHistoryComponent implements OnInit {
 
-  @Input() voteList: Array<Vote> = [];
-  constructor() { }
+  //@Input() voteList: Array<Vote> = [];
+  constructor(public voteService: VoteService) { }
 
   ngOnInit(): void {
     /* [{
@@ -33,6 +34,7 @@ export class VotingHistoryComponent implements OnInit {
   }
 
   removeVote(voteIndex: number) {
-    this.voteList.splice(voteIndex, 1);
+    //this.voteList.splice(voteIndex, 1);
+    this.voteService.removeVote(voteIndex);
   }
 }

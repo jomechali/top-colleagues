@@ -5,7 +5,7 @@
     </div>
     <div class="card-body d-flex flex-column gap-3">
 
-      <div class="card-text row" *ngFor="let currentVote of voteList, let index = index">
+      <div class="card-text row" *ngFor="let currentVote of voteService.list(), let index = index">
 
         <div class="col-sm-4 d-flex align-self-center justify-content-sm-center">
           <img src="assets/logo.png" alt="" style="height: 40px; width: 40px;">
