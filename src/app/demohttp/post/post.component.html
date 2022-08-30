@@ -1,0 +1,9 @@
+<p>post works!</p>
+
+<ul>
+  <li *ngFor="let item of postTab">
+    {{item.id}} - {{item.title}}
+  </li>
+</ul>
+
+<button (click)="add()">ADD</button>

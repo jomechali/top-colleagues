@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { LikeHate } from '../models/like-hate';
 import { Vote } from '../models/vote';
+import { LikehateService } from './likehate.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,11 @@ export class VoteService {
 
   private listVotes: Vote[] = [];
 
-  constructor() { }
+  private _cptHate :number = 0;
+
+  private _cptLike :number = 0;
+
+  constructor(private srvLikeHate:LikehateService) { }
 
   init() {
 
@@ -37,6 +42,17 @@ export class VoteService {
   }
 
   addVote(vote: Vote) {
+    if(vote.vote == LikeHate.HATE) {
+
+      this.srvLikeHate.nextHate(++this._cptHate);
+
+    }
+
+    if(vote.vote == LikeHate.LIKE) {
+
+      this.srvLikeHate.nextLike(++this._cptLike);
+
+    }
     this.listVotes.push(vote);
   }
   removeVote(index: number) {
