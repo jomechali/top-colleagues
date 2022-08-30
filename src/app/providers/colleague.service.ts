@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { IColleague } from '../models/icolleague';
 import { Vote } from '../models/vote';
@@ -9,7 +10,23 @@ import { VoteService } from './vote.service';
 export class ColleagueService {
 
   private listColleagues: IColleague[] = [];
-  constructor(private serviceVote: VoteService) {
+  /**
+
+   *
+
+   * @param servicevote
+
+   * @param http : je récupére l'injection HttpClient
+
+   * pour pouvoir communiquer avec notre BackEnd.
+
+   */
+
+  constructor(
+
+    //private servicevote:VoteService,
+
+    private http: HttpClient) {
 
     this.init();
 
@@ -30,12 +47,17 @@ export class ColleagueService {
     return this.listColleagues;
   }
 
-  addColleague(colleague:IColleague):void {
+  addColleague(colleague: IColleague): void {
     this.listColleagues.push(colleague);
   }
 
-  addVote(vote:Vote){
-    this.serviceVote.addVote(vote);
+  addVote(vote: Vote) {
+    //this.serviceVote.addVote(vote);
+    this.http.post<Vote>("http://localhost:3000/votes", vote)
+      .subscribe({
+        next: vote => console.log(vote),
 
+        error: error => console.log(error)
+      })
   }
 }

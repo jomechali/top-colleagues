@@ -1,0 +1,228 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "votes": [
+    {
+      "colleague": {
+        "photo": "assets/logo.png",
+        "pseudo": "cge",
+        "score": 1080
+      },
+      "vote": 0,
+      "id": 1
+    },
+    {
+      "colleague": {
+        "photo": "assets/logo.png",
+        "pseudo": "cge",
+        "score": 80
+      },
+      "vote": 1,
+      "id": 2
+    },
+    {
+      "colleague": {
+        "photo": "assets/logo.png",
+        "pseudo": "cge",
+        "score": 580
+      },
+      "vote": 1,
+      "id": 3
+    },
+    {
+      "colleague": {
+        "photo": "assets/logo.png",
+        "pseudo": "speedy",
+        "score": -420
+      },
+      "vote": 1,
+      "id": 4
+    },
+    {
+      "colleague": {
+        "photo": "assets/logo.png",
+        "pseudo": "speedy",
+        "score": -920
+      },
+      "vote": 1,
+      "id": 5
+    },
+    {
+      "colleague": {
+        "photo": "assets/logo.png",
+        "pseudo": "robert",
+        "score": -450
+      },
+      "vote": 1,
+      "id": 6
+    },
+    {
+      "colleague": {
+        "photo": "assets/logo.png",
+        "pseudo": "cge",
+        "score": 80
+      },
+      "vote": 1,
+      "id": 7
+    },
+    {
+      "colleague": {
+        "photo": "assets/logo.png",
+        "pseudo": "robert",
+        "score": 550
+      },
+      "vote": 0,
+      "id": 8
+    },
+    {
+      "colleague": {
+        "photo": "assets/logo.png",
+        "pseudo": "robert",
+        "score": 50
+      },
+      "vote": 1,
+      "id": 9
+    },
+    {
+      "colleague": {
+        "photo": "assets/logo.png",
+        "pseudo": "speedy",
+        "score": -420
+      },
+      "vote": 1,
+      "id": 10
+    },
+    {
+      "colleague": {
+        "photo": "assets/logo.png",
+        "pseudo": "speedy",
+        "score": 80
+      },
+      "vote": 0,
+      "id": 11
+    },
+    {
+      "colleague": {
+        "photo": "assets/logo.png",
+        "pseudo": "speedy",
+        "score": 580
+      },
+      "vote": 0,
+      "id": 12
+    },
+    {
+      "colleague": {
+        "photo": "assets/logo.png",
+        "pseudo": "robert",
+        "score": -450
+      },
+      "vote": 1,
+      "id": 13
+    },
+    {
+      "colleague": {
+        "photo": "assets/logo.png",
+        "pseudo": "cge",
+        "score": 1080
+      },
+      "vote": 0,
+      "id": 14
+    },
+    {
+      "colleague": {
+        "photo": "assets/logo.png",
+        "pseudo": "cge",
+        "score": 580
+      },
+      "vote": 1,
+      "id": 15
+    },
+    {
+      "colleague": {
+        "photo": "assets/logo.png",
+        "pseudo": "speedy",
+        "score": -420
+      },
+      "vote": 1,
+      "id": 16
+    },
+    {
+      "colleague": {
+        "photo": "assets/logo.png",
+        "pseudo": "cge",
+        "score": 80
+      },
+      "vote": 1,
+      "id": 17
+    },
+    {
+      "colleague": {
+        "photo": "assets/logo.png",
+        "pseudo": "cge",
+        "score": -420
+      },
+      "vote": 1,
+      "id": 18
+    },
+    {
+      "colleague": {
+        "photo": "assets/logo.png",
+        "pseudo": "robert",
+        "score": -450
+      },
+      "vote": 1,
+      "id": 19
+    },
+    {
+      "colleague": {
+        "photo": "assets/logo.png",
+        "pseudo": "robert",
+        "score": -950
+      },
+      "vote": 1,
+      "id": 20
+    },
+    {
+      "colleague": {
+        "photo": "assets/logo.png",
+        "pseudo": "robert",
+        "score": -1450
+      },
+      "vote": 1,
+      "id": 21
+    },
+    {
+      "colleague": {
+        "photo": "assets/logo.png",
+        "pseudo": "robert",
+        "score": -450
+      },
+      "vote": 1,
+      "id": 22
+    },
+    {
+      "colleague": {
+        "photo": "assets/logo.png",
+        "pseudo": "robert",
+        "score": -950
+      },
+      "vote": 1,
+      "id": 23
+    }
+  ]
+}

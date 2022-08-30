@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { LikeHate } from '../models/like-hate';
 import { Vote } from '../models/vote';
 import { LikehateService } from './likehate.service';
@@ -10,11 +12,11 @@ export class VoteService {
 
   private listVotes: Vote[] = [];
 
-  private _cptHate :number = 0;
+  private _cptHate: number = 0;
 
-  private _cptLike :number = 0;
+  private _cptLike: number = 0;
 
-  constructor(private srvLikeHate:LikehateService) { }
+  constructor(private srvLikeHate: LikehateService, private http: HttpClient) { }
 
   init() {
 
@@ -36,19 +38,30 @@ export class VoteService {
     }
     ]
   }
+  findAll(): Observable<Vote[]> {
+    return this.http.get<Vote[]>("http://localhost:3000/votes");
+  }
+  /**
 
-  list(): Vote[] {
-    return this.listVotes;
+     *
+
+     * @returns Observable<Vote[]> pour | async dans
+
+     * le composant voting-history
+
+     */
+  list(): Observable<Vote[]> {
+    return this.findAll();
   }
 
   addVote(vote: Vote) {
-    if(vote.vote == LikeHate.HATE) {
+    if (vote.vote == LikeHate.HATE) {
 
       this.srvLikeHate.nextHate(++this._cptHate);
 
     }
 
-    if(vote.vote == LikeHate.LIKE) {
+    if (vote.vote == LikeHate.LIKE) {
 
       this.srvLikeHate.nextLike(++this._cptLike);
 
